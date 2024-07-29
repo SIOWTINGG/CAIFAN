@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caifan Calorie Counter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url(assets/background.jpg);
+            text-align: center;
+            font-size: 20px;
+        }
+
+        h1,h2 {
+            font-family: 'Poetsen One', sans-serif;
+        }
+
+        .thumbnails-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .thumbnail, .empty {
+            flex: 0 0 calc(33.33% - 20px);
+            margin: 10px;
+            text-align: center;
+        }
+
+        .thumbnail {
+            flex: 0 0 calc(33.33% - 20px);
+            margin: 10px; 
+            text-align: center;
+        }
+
+        .thumbnail img {
+            width: 100px; 
+            height: 100px;
+            border-radius: 50%;
+            border: 1px solid black;
+        }
+
+        .thumbnail p {
+            margin-top: 10px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 2px;
+        }
+
+        .button-container button {
+            background-color: burlywood;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .button-container button:hover {
+            background-color: darkgoldenrod;
+        }
+
+        .button-container button.clicked {
+            background-color: darkgoldenrod;
+        }
+
+        .next-step-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Adjust spacing between buttons as needed */
+            margin-top: 50px;
+        }
+
+        .next-step-button, .additional-button {
+            width: 200px;
+            height: 50px;
+            font-size: 20px;
+            background-color: green;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+
+        .next-step-button:hover, .additional-button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Choose your VEGGIE</h1>
+    <p>Veggie | Others | Zhup</p>
+    <div class="thumbnails-container">
+        <div class="thumbnail">
+            <img src="./assets/bittergourd.png" alt="bittergourd">
+            <p><b>Stir Fried Bittergourd</b></p>
+            <p>137 calories</p>
+        </div>
+        <div class="thumbnail">
+            <img src="./assets/broccoli.png" alt="broccoli">
+            <p><b>Stir Fried Broccoli</b></p>
+            <p>99 calories</p>
+        </div>
+        <div class="thumbnail">
+            <img src="./assets/eggplant.png" alt="eggplant">
+            <p><b>Stir Fried Eggplant</b></p>
+            <p>185 calories</p>
+        </div>
+        <div class="thumbnail">
+            <img src="./assets/curry veg.png" alt="curry vegetable">
+            <p><b>Curry Vegetable</b></p>
+            <p>178 calories</p>
+        </div>
+        <div class="thumbnail">
+            <img src="./assets/taugay.png" alt="tau gay">
+            <p><b>Stir Fried Tau Gay</b></p>
+            <p>90 calories</p>
+        </div>
+        <div class="thumbnail">
+            <img src="./assets/longbean.png" alt="long bean">
+            <p><b>Stir Fried Long Beans</b></p>
+            <p>82 calories</p>
+        </div>
+    </div>
+    <div class="next-step-container">
+        <a href="calculate5.html"><button class="next-step-button">Calculate</button></a>
+        <a href="others6.html"><button class="additional-button">Next</button></a>
+    </div>
+
+    <script>
+        function toggleButtonState(button) {
+            const buttons = document.querySelectorAll('.button-container button');
+            buttons.forEach(btn => btn.classList.remove('clicked'));
+            button.classList.add('clicked');
+        }
+    </script>
+    
+</body>
+</html>

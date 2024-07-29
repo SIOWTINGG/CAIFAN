@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caifan Calorie Counter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+
+</head>
+<style>
+body {
+      background-image: url(assets/background.jpg);
+      text-align: center;
+      font-size: 20px;
+    }
+
+h1,h2 {
+    font-family: 'Poetsen One', sans-serif;
+}
+
+.thumbnails-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.thumbnail, .empty {
+            flex: 0 0 calc(33.33% - 20px);
+            margin: 10px;
+            text-align: center;
+}
+
+.thumbnail {
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 10px; 
+    text-align: center;
+}
+
+.thumbnail img {
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.thumbnail p {
+    margin-top: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 2px;
+}
+
+.button-container button {
+    background-color: burlywood;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+ }
+
+.button-container button:hover {
+    background-color: darkgoldenrod
+}
+
+.button-container button.clicked {
+    background-color: darkgoldenrod;
+}
+
+.next-step-button {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 50px;
+}
+
+.next-step-button:hover {
+            background-color: darkgreen;
+}
+
+</style>
+<body>
+    <h1>Choose your PROTEIN</h1>
+    <p>Protein | Veggie | Others | Zhup</p>
+    <div class="thumbnails-container">
+        <div class="thumbnail">
+            <img src="assets/sweet sour pork.png" alt="sweet sour pork">
+            <p><b>Sweet and Sour Pork</b></p>
+            <p>200 calories</p>
+        </div>
+        <div class="thumbnail">
+            <img src="assets/curry chicken.png" alt="curry chicken">
+            <p><b>Curry Chicken</b></p>
+            <p>248 calories</p>
+        </div>
+        <div class="thumbnail">
+            <img src="assets/braised pork belly.png" alt="braised pork belly">
+            <p><b>Braised Pork Belly</b></p>
+            <p>300 calories</p>
+        </div>
+        <div class="thumbnail">
+            <img src="assets/dory fish.png" alt="steamed dory fillet">
+            <p><b>Steamed Dory Fillet</b></p>
+            <p>305 calories</p>
+        </div>
+        <div class="thumbnail">
+            <img src="assets/gong bao chicken.png" alt="gong bao chicken">
+            <p><b>Gong Bao Chicken</b></p>
+            <p>250 calories</p>
+        </div>
+        <div class="thumbnail">
+            <img src="assets/pork cutlet.png" alt="fried pork cutlet">
+            <p><b>Fried Pork Cutlet</b></p>
+            <p>200 calories</p>
+        </div>
+        <div class="thumbnail">
+            <img src="./assets/fried chicken.png" alt="fried chicken">
+            <p><b>Fried Chicken</b></p>
+            <p>350 calories</p>
+        </div>
+        <div class="thumbnail">
+            <img src="./assets/cereal fish.png" alt="cereal fish">
+            <p><b>Cereal Fish</b></p>
+            <p>350 calories</p>
+        </div>
+        <div class="thumbnail">
+            <img src="./assets/hot dog and potato.png" alt="hot dog and potatoes">
+            <p><b>Hot Dog and Potatoes</b></p>
+            <p>300 calories</p>
+        </div>
+        <div class="empty"></div>
+        <div class="thumbnail">
+            <img src="./assets/no protein.png" alt="no protein">
+            <p><b>No Protein</b></p>
+            <p>0 calories</p>
+        </div>
+        <div class="empty"></div>
+    </div>
+    <div class="next-step-container">
+        <a href="calculate5.html"><button class="next-step-button">Calculate</button></a>
+        <a href="veg4.html"><button class ="next-step-button">Next</button></a>
+    </div>
+
+    <script>
+        function toggleButtonState(button) {
+            const buttons = document.querySelectorAll('.button-container button');
+            buttons.forEach(btn => btn.classList.remove('clicked'));
+            button.classList.add('clicked');
+        }
+    </script>
+    
+</body>
+</html>
